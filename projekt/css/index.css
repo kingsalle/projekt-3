@@ -1,0 +1,345 @@
+/*-------- front page ----------*/
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  background-color: #E9E7E0;
+}
+nav{
+   display: flex;
+   padding: 2% 6%;
+   justify-content: space-between;
+   align-items: center;
+}
+nav img{
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+  color: #0B0B0A;
+}
+.nav-links ul li{
+ list-style: none;
+ display: inline-block;
+ padding: 8px 12px;
+ position: relative;
+}
+.nav-links ul li{
+  color: #0B0B0A;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li a{
+  text-decoration: none;
+  color: black;
+  font-family: Raleway;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #5E7595;
+  display:block;
+  magrin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+.text-box{
+  width: 50%;
+  color: #0B0B0A;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.text-box2{
+width: 50%;
+color: #0B0B0A;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+}
+.text-box h1{
+  height: auto;
+  font-size: 50px;
+  padding: 100px 15% 100px 20%;
+  font-family: Raleway;
+}
+div.text-box a{
+  font-size: 2vw;
+  color: #1F5180;
+  background-color: #5E7595;
+  margin: 100px 20% 0px 20%;
+  padding: 20px 20px 20px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: Raleway;
+}
+.text-box img{
+  height: auto;
+  max-width: 100%;
+  float: right;
+  margin-right: 10%;
+}
+.container{
+  width: 100%;
+  display: inline-flex;
+}
+.social-media ul{
+  display: inline-flex;
+  margin: 100px 20% 0px 20%;
+}
+.social-media ul li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  max-height: 25px;
+  margin-left: 25px;
+}
+.social-media ul li a{
+  background-color: #E9E7E0;
+  margin: 0;
+  padding: 0;
+}
+/*-------------- portfolio page -----------*/
+
+h2{
+  font-size: 80px;
+  color: #5E7595;
+  margin-bottom: 20px;
+  font-family: Raleway;
+}
+p{
+  color: black;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 1.1rem;
+  margin-bottom: 3,8rem;
+
+}
+.container1{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+
+}
+.portfolio1{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 30px;
+}
+.portfolio1 img{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*-------------- contact page -----------*/
+
+.contact{
+  padding: 40px 15%;
+}
+.contact{
+  background: #E9E7E0;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  grid-gap: 6rem;
+}
+.contact-img img{
+  max-width: 100%;
+  width: 720px;
+  height: auto;
+  border-radius: 10px;
+}
+.contact-form h1{
+  font-size: 80px;
+  color: #5E7595;
+  margin-bottom: 20px;
+  font-family: Raleway;
+}
+.contact-form p{
+  color: black;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 1.1rem;
+  margin-bottom: 3,8rem;
+}
+.contact-form form{
+  position: relative;
+}
+.contact-form form input,
+form textarea{
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background: white;
+  color: black;
+  font-size: 1,1rem;
+  margin-bottom: 0,7rem;
+  border-radius: 10px;
+}
+.contact-form textarea{
+  resize: none;
+  height: 200px;
+}
+.contact-form form .btn{
+  display: inline-block;
+  background: #5E7595;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 660;
+  border: 20px solid transparent;
+  border-radius: 10px;
+  width: 220px;
+  transition: ease .20s;
+  cursor: pointer;
+}
+.contact-form form .btn:hover{
+  border: 2px solid #black;
+  background: transparent;
+  transform: scale(1.1);
+}
+@media (max-width: 1570px){
+  section{
+
+  }
+  .contact-form h1{
+    font-size: 60px;
+  }
+  .contact-form p{
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 1090px){
+  .contact{
+    grid-gap: 2rem;
+    transition: .3s
+  }
+}
+@media (max-width: 1000px){
+  .contact{
+    grid-template-columns: 1fr;
+  }
+  .contact-form{
+    order: 2;
+  }
+  .contact-img img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+/*-------------- about me page -----------*/
+
+.about{
+  width: 100%
+  padding: 78px 0px;
+  background: #5E7595
+}
+.about img{
+  height: auto;
+  width: 420px;
+}
+.about-text{
+  width: 550px;
+}
+
+.main{
+  width: 1130px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text h1{
+  color: black;
+  font-family: Raleway;
+  font-size: 80px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.about-text h3{
+  color:#5E7595;
+  font-family: Raleway;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+.about-text p{
+  color: black;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 25px;
+
+}
+.about-text ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.about-text ul li{
+  color: #1F5180;
+  text-decoration: none;
+  font-size: 18px;
+}
+.about-text ul li a{
+  text-decoration: none;
+  color: #1F5180;
+  font-family: Raleway;
+}
+.about-work{
+  width: 95%;
+  padding: 50px 0px;
+}
+.about-work p{
+  color:#black;
+  font-family: Raleway;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  letter-spacing: 0px;
+}
+
+  .about-work ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  .about-work ul li{
+    color: #black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .about-work ul li a{
+    text-decoration: none;
+    font-family: Raleway;
+    color: #1F5180;
